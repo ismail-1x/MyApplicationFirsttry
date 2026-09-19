@@ -9,7 +9,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import android.widget.Button;
 import android.widget.TextView;
-
+import android.graphics.Color;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,7 +24,11 @@ public class MainActivity extends AppCompatActivity {
         buttonChangeText.setOnClickListener(v -> {
             textView.setText("Button was clicked!");
         });
+        Button buttonChangeColor = findViewById(R.id.buttonChangeColor);
 
+        buttonChangeColor.setOnClickListener(v -> {
+            textView.setTextColor(Color.RED);
+        });
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
