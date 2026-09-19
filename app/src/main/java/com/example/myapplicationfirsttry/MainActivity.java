@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         buttonChangeBackground.setOnClickListener(v -> {
             findViewById(R.id.main).setBackgroundColor(Color.LTGRAY);
         });
+        //Code for revert
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
