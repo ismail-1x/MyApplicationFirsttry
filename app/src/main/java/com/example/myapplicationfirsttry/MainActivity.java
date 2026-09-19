@@ -29,6 +29,10 @@ public class MainActivity extends AppCompatActivity {
         buttonChangeColor.setOnClickListener(v -> {
             textView.setTextColor(Color.RED);
         });
+        Button buttonChangeBackground = findViewById(R.id.buttonChangeBackground);
+        buttonChangeBackground.setOnClickListener(v -> {
+            findViewById(R.id.main).setBackgroundColor(Color.LTGRAY);
+        });
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
